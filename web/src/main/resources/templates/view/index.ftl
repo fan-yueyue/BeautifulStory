@@ -19,10 +19,13 @@
     <meta name="description" content="美丽说是白领女性时尚消费第一品牌，为超过1亿注册用户提供导购信息。建立300万全球女性时尚品牌商品库，超过1000家全球品牌达成官方合作导购体验，更好的满足白领女性的时尚消费需求。" />
     <meta name="keywords" content="美丽说,美丽说官网,美丽说首页,美丽说登录,导购,白领,女装,网购" />
     <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" type="text/css" href="/static/pc/css/base.css?1607170150.25" />
-    <link rel="icon" href="/static/pic/_o/75/6e/2f6871f198c0bd7615ffbf9a2f5f_49_48.c5.png" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="/static/pc/css/page/welcome.css?1607170150.25" />
-    <script type="text/javascript" src="/static/pc/jsmin/fml.js?1"></script>
+    <link rel="stylesheet" type="text/css" href="/pc/css/base.css?1607170150.25" />
+    <link rel="icon" href="/pic/_o/75/6e/2f6871f198c0bd7615ffbf9a2f5f_49_48.c5.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/pc/css/page/welcome.css?1607170150.25" />
+    <script type="text/javascript" src="/pc/jsmin/fml.js?1"></script>
+    <script type="text/javascript" src="/js/my-js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/js/my-js/index.js"></script>
+
     <script>fml.setOptions({
         'sversion': '1607170150.25',
         'defer': true,
@@ -55,7 +58,7 @@
             <ul>
                 <li class="drop">
                     <a href="../setPersonal.html" class="nick" target="_blank">
-                        <img class="face" src="/static/new1/v1/bdefaultavatar/03.jpg" />阿猫来了
+                        <img class="face" src="/new1/v1/bdefaultavatar/03.jpg" />阿猫来了
                         <em class="arrow"></em></a>
                     <ul class="down account">
                         <li>
@@ -123,7 +126,7 @@
                 <div class="hotword"></div>
             </div>
             <a class="spread" href="" target="_blank">
-                <img src="/static/p2/160804/1rp_49cgihk50031c69jjk51ilkjk4950_210x157.gif" /></a>
+                <img src="/p2/160804/1rp_49cgihk50031c69jjk51ilkjk4950_210x157.gif" /></a>
         </div>
     </div>
     <div class="nav_main_box">
@@ -141,7 +144,7 @@
                                     <a href="list.ftl#10057095?action=clothing&mt=12.12299.r127478.15223&acm=1.mce.2.12299.0.0.15223_127478" target="_blank">背心</a>
                                     <a class="red" href="list.ftl#10057098?action=clothing&mt=12.12299.r127486.15223&acm=1.mce.2.12299.0.0.15223_127486" target="_blank">套装</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -188,7 +191,7 @@
                                     <a class="red" href="list.ftl#10059091?action=skirt&mt=12.12307.r131116.15237&acm=1.mce.2.12307.0.0.15237_131116" target="_blank">早秋上新</a>
                                     <a href="list.ftl#10057153?action=skirt&mt=12.12307.r127329.15237&acm=1.mce.2.12307.0.0.15237_127329" target="_blank">衣裙套装</a></p>
                                 <samp class="corner">
-                                    <img src="../../static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="..//p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -231,7 +234,7 @@
                                     <a href="list.ftl#10057369?action=trousers&mt=12.12827.r127958.15998&acm=1.mce.2.12827.0.0.15998_127958" target="_blank">牛仔裤</a>
                                     <a class="red" href="list.ftl#10057370?action=trousers&mt=12.12827.r127964.15998&acm=1.mce.2.12827.0.0.15998_127964" target="_blank">小脚裤</a></p>
                                 <samp class="corner">
-                                    <img src="../../static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="..//p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -270,7 +273,7 @@
                                     <a href="list.ftl#10057112?action=shoes&mt=12.12828.r127643.15999&acm=1.mce.2.12828.0.0.15999_127643" target="_blank">凉鞋</a>
                                     <a href="list.ftl#10057111?action=shoes&mt=12.12828.r127654.15999&acm=1.mce.2.12828.0.0.15999_127654" target="_blank">小白鞋</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -312,7 +315,7 @@
                                     <a href="list.ftl#10057162?action=bags&mt=12.12829.r127564.16000&acm=1.mce.2.12829.0.0.16000_127564" target="_blank">斜挎包</a>
                                     <a href="list.ftl#10057177?action=bags&mt=12.12829.r127566.16000&acm=1.mce.2.12829.0.0.16000_127566" target="_blank">迷你包</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -357,7 +360,7 @@
                                     <a class="red" href="list.ftl#10057424?action=accessories&mt=12.12830.r127510.16001&acm=1.mce.2.12830.0.0.16001_127510" target="_blank">锁骨链</a>
                                     <a href="list.ftl#10057430?action=accessories&mt=12.12830.r127513.16001&acm=1.mce.2.12830.0.0.16001_127513" target="_blank">手镯</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -409,7 +412,7 @@
                                     <a href="list.ftl#10057250?action=magic&mt=12.12831.r127863.16002&acm=1.mce.2.12831.0.0.16002_127863" target="_blank">洁面</a>
                                     <a href="list.ftl#10057308?action=magic&mt=12.12831.r127874.16002&acm=1.mce.2.12831.0.0.16002_127874" target="_blank">唇膏口红</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -462,7 +465,7 @@
                                     <a class="red" href="list.ftl#10058140?action=neiyi&mt=12.12832.r127928.16003&acm=1.mce.2.12832.0.0.16003_127928" target="_blank">隐形内衣</a>
                                     <a href="list.ftl#10057245?action=neiyi&mt=12.12832.r127875.16003&acm=1.mce.2.12832.0.0.16003_127875" target="_blank">睡裙</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -501,7 +504,7 @@
                                     <a href="list.ftl#10057191?action=men&mt=12.12833.r127835.16004&acm=1.mce.2.12833.0.0.16004_127835" target="_blank">POLO衫</a>
                                     <a class="red" href="list.ftl#10057201?action=men&mt=12.12833.r127847.16004&acm=1.mce.2.12833.0.0.16004_127847" target="_blank">牛仔裤</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -545,7 +548,7 @@
                                     <a href="list.ftl#10057342?action=children&mt=12.12834.r128013.16005&acm=1.mce.2.12834.0.0.16005_128013" target="_blank">连衣裙</a>
                                     <a class="red" href="list.ftl#10059095?action=children&mt=12.12834.r128014.16005&acm=1.mce.2.12834.0.0.16005_128014" target="_blank">早秋新品</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -592,7 +595,7 @@
                                     <a href="list.ftl#10057137?action=home&mt=12.12835.r133419.16006&acm=1.mce.2.12835.0.0.16006_133419" target="_blank">衣柜</a>
                                     <a class="red" href="list.ftl#10057141?action=home&mt=12.12835.r128196.16006&acm=1.mce.2.12835.0.0.16006_128196" target="_blank">收纳盒</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -635,7 +638,7 @@
                                     <a href="list.ftl#10057260?action=food&mt=12.12836.r128009.16007&acm=1.mce.2.12836.0.0.16007_128009" target="_blank">蜜饯果干</a>
                                     <a href="list.ftl#10057261?action=food&mt=12.12836.r128010.16007&acm=1.mce.2.12836.0.0.16007_128010" target="_blank">方便速食</a></p>
                                 <samp class="corner">
-                                    <img src="/static/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
+                                    <img src="/p1/160810/idid_ifrtom3dmqygcojumezdambqhayde_6x10.png" /></samp>
                             </div>
                             <ul class="nav_list">
                                 <li>
@@ -732,7 +735,7 @@
     </ul>
     <!-- 官网直邮 -->
     <h2 alt="官网直邮">
-        <img src="/static/p1/160722/idid_ie4wem3fgazwcolfhezdambqgqyde_145x71.jpg"></h2>
+        <img src="/p1/160722/idid_ie4wem3fgazwcolfhezdambqgqyde_145x71.jpg"></h2>
     <div class="brand_wrap">
         <div class="brand_box">
             <a href="../shop.html#11706gm6?ptp=1.CmymMoKw.0.0.uEaSW&mt=12.12314.r120353.15249&acm=1.mce.2.12314.0.0.15249_120353" class="ad_up imgBox" target="_blank">
@@ -761,7 +764,7 @@
         </div>
         <div class="showOne">
             <a href="../shopdetail.html#?1gldwym?ptp=1.CmymMoKw._items.0.9bv0o&mt=12.12892.r123181.16073&acm=1.mce.2.12892.0.0.16073_123181" target="_blank">
-                <img src="/static/p2/160811/1c2_54dck82g0jh2kj5c79h47l7al8e0d_305x589.jpg"></a>
+                <img src="/p2/160811/1c2_54dck82g0jh2kj5c79h47l7al8e0d_305x589.jpg"></a>
         </div>
         <div class="ad_r">
             <a href="../shop.html#11706fou/list/index?categoryId=20042035&ptp=1.__item_detail.0.0.sXoee&mt=12.12893.r123182.16074&acm=1.mce.2.12893.0.0.16074_123182" class="imgBox" target="_blank">
@@ -781,7 +784,7 @@
     <!-- 官网直邮 end -->
     <!-- 热销模块 -->
     <h2 alt="为你精选">
-        <img src="/static/p2/160810/1sy_4ibl936dd3lbj53f44l1dia5355ij_150x71.jpg"></h2>
+        <img src="/p2/160810/1sy_4ibl936dd3lbj53f44l1dia5355ij_150x71.jpg"></h2>
     <div class="common_box">
         <div class="ad_t">
             <a href="list.ftl#10057153?action=skirt&mt=12.12575.r121695.15662&acm=1.mce.2.12575.0.0.15662_121695" class="ad1 imgBox" target="_blank">
@@ -825,7 +828,7 @@
         </div>
     </div>
     <h2 alt="热销上衣">
-        <img src="../../static/p2/160810/1sy_7kgkelaf2k0kh060dbh8d6cife273_150x71.jpg"></h2>
+        <img src="..//p2/160810/1sy_7kgkelaf2k0kh060dbh8d6cife273_150x71.jpg"></h2>
     <div class="common_box">
         <div class="ad_t">
             <a href="list.ftl#10059097?action=clothing&mt=12.13045.r127310.16254&acm=1.mce.2.13045.0.0.16254_127310" class="ad1 imgBox" target="_blank">
@@ -870,7 +873,7 @@
         </div>
     </div>
     <h2 alt="时髦美裙">
-        <img src="../../static/p2/160810/1sy_5b6aikjb3cgdk9jj8j65h5dafh13i_150x71.jpg"></h2>
+        <img src="..//p2/160810/1sy_5b6aikjb3cgdk9jj8j65h5dafh13i_150x71.jpg"></h2>
     <div class="common_box">
         <div class="ad_t">
             <a href="list.ftl#10057900?action=skirt&mt=12.13046.r127214.16255&acm=1.mce.2.13046.0.0.16255_127214" class="ad1 imgBox" target="_blank">
@@ -915,7 +918,7 @@
         </div>
     </div>
     <h2 alt="精选裤子">
-        <img src="/static/p2/160810/1sy_6g3edk5k669kac3fbfd0ch589b895_150x71.jpg"></h2>
+        <img src="/p2/160810/1sy_6g3edk5k669kac3fbfd0ch589b895_150x71.jpg"></h2>
     <div class="common_box">
         <div class="ad_t">
             <a href="list.ftl#10057366?action=trousers&mt=12.13047.r127737.16256&acm=1.mce.2.13047.0.0.16256_127737" class="ad1 imgBox" target="_blank">
@@ -960,7 +963,7 @@
         </div>
     </div>
     <h2 alt="百搭鞋品">
-        <img src="/static/p2/160810/1sy_1fhk6gjg7kegc3c819eji5ic8c7ih_150x71.jpg"></h2>
+        <img src="/p2/160810/1sy_1fhk6gjg7kegc3c819eji5ic8c7ih_150x71.jpg"></h2>
     <div class="common_box">
         <div class="ad_t">
             <a href="list.ftl#10059155?action=shoes&mt=12.13049.r127559.16258&acm=1.mce.2.13049.0.0.16258_127559" class="ad1 imgBox" target="_blank">
@@ -1004,7 +1007,7 @@
         </div>
     </div>
     <h2 alt="百搭包配">
-        <img src="/static/p2/160810/1sy_2471h8c3dkjag22eiecb5hf77fli5_150x71.jpg"></h2>
+        <img src="/p2/160810/1sy_2471h8c3dkjag22eiecb5hf77fli5_150x71.jpg"></h2>
     <div class="common_box">
         <div class="ad_t">
             <a href="list.ftl#10057189?action=bags&mt=12.13050.r127873.16259&acm=1.mce.2.13050.0.0.16259_127873" class="ad1 imgBox" target="_blank">
@@ -1049,7 +1052,7 @@
         </div>
     </div>
     <h2 alt="正品美妆">
-        <img src="/static/p2/160810/1sy_02laf68dbg3blj2ljibf22lckk05i_150x71.jpg"></h2>
+        <img src="/p2/160810/1sy_02laf68dbg3blj2ljibf22lckk05i_150x71.jpg"></h2>
     <div class="common_box">
         <div class="ad_t">
             <a href="list.ftl#10057287?action=magic&mt=12.13051.r127259.16260&acm=1.mce.2.13051.0.0.16260_127259" class="ad1 imgBox" target="_blank">
@@ -1094,7 +1097,7 @@
         </div>
     </div>
     <h2 alt="家居美食">
-        <img src="/static/p2/160810/1sy_2lh64bgkhh7388g20f1fhd8kigd94_150x71.jpg"></h2>
+        <img src="/p2/160810/1sy_2lh64bgkhh7388g20f1fhd8kigd94_150x71.jpg"></h2>
     <div class="common_box">
         <div class="ad_t">
             <a href="list.ftl#10057100?action=home&mt=12.13052.r128080.16261&acm=1.mce.2.13052.0.0.16261_128080" class="ad1 imgBox" target="_blank">
@@ -1190,15 +1193,15 @@
         </div>
         <div class="flist service">
             <h4>美丽说微信服务号</h4>
-            <img class="qrcode" src="/static/p2/160802/7e_61hjl8kjfjfagkg3cdaj05fghck9c_100x100.png" alt="美丽说服务号二维码" /></div>
+            <img class="qrcode" src="/p2/160802/7e_61hjl8kjfjfagkg3cdaj05fghck9c_100x100.png" alt="美丽说服务号二维码" /></div>
         <div class="flist last" style="float:left;">
             <h4>美丽说客户端下载</h4>
             <p style="background:none; margin-top:0px;" class="client">
-                <img class="qrcode" src="/static/p2/160802/7e_74j23d2a5f5j3bj31h70375gbeec1_100x100.png"></p>
+                <img class="qrcode" src="/p2/160802/7e_74j23d2a5f5j3bj31h70375gbeec1_100x100.png"></p>
         </div>
         <div class="record">Copyright ©2016 Meilishuo.com &nbsp;
-            <a href="/static/new1/v1/bmisc/518ea1bbd36948b90e658485d2700e62/181714310539.pdf" target="_blank">电信与信息服务业务经营许可证100798号</a>&nbsp;
-            <a href="/static/p1/160811/idid_ifrtszjqmmzdazrumezdambqhayde_2436x3500.jpg" target="_blank">经营性网站备案信息</a>&nbsp;
+            <a href="/new1/v1/bmisc/518ea1bbd36948b90e658485d2700e62/181714310539.pdf" target="_blank">电信与信息服务业务经营许可证100798号</a>&nbsp;
+            <a href="/p1/160811/idid_ifrtszjqmmzdazrumezdambqhayde_2436x3500.jpg" target="_blank">经营性网站备案信息</a>&nbsp;
             <br />京ICP备11031139号&nbsp; 京公网安备110108006045&nbsp;&nbsp; 客服电话：4000-800-577&nbsp; 文明办网文明上网举报电话：010-82615762 &nbsp;
             <a href="http://net.china.com.cn/index.htm" target="_blank">违法不良信息举报中心</a></div>
     </div>
@@ -1209,7 +1212,7 @@
         <div class="biu-download">下载
             <span>APP</span>
             <div class="mls-qrcode">
-                <img src="/static/p2/160802/7e_0h22fa0g03cgl0c5676cb6k2ii71h_140x140.png"></div>
+                <img src="/p2/160802/7e_0h22fa0g03cgl0c5676cb6k2ii71h_140x140.png"></div>
         </div>
         <div class="biu-cart">
             <a href="../mycart.html" target="_blank">
@@ -1230,10 +1233,10 @@
     </div>
     <div class="biu-go2top"></div>
 </div>
-<script type="text/javascript" src="/static/pc/jsmin/jquery.js?1.12.4"></script>
-<script type="text/javascript" src="/static/__static/logger/0.1.8/logger.js"></script>
-<script src="/static/__newtown/im_web/assets/common/openim/index.js"></script>
-<script src="/static/pc/~page/welcome+base?1607170150.25"></script>
+<script type="text/javascript" src="/pc/jsmin/jquery.js?1.12.4"></script>
+<script type="text/javascript" src="/__static/logger/0.1.8/logger.js"></script>
+<script src="/__newtown/im_web/assets/common/openim/index.js"></script>
+<script src="/pc/~page/welcome+base?1607170150.25"></script>
 <script>fml.use('page/welcome');;
 fml.use('base');;
 fml.iLoad();</script>
