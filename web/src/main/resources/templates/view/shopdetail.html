@@ -74,6 +74,7 @@
     </script>
 </head>
 <body>
+<input type="hidden" value="${name }" id="productId"/>
 
 
 <script type="text/javascript">
@@ -108,22 +109,60 @@
 
         $.ajax({
             url:"http://localhost:8090/productDetails/productDetailsInquiry",
-            data:{},
+            data:{"id":$('#productId').val()},
             dataType:"json",
             success:function (data) {
                 console.log(data);
                 alert("成功");
                 alert(data.stock);
+
                 $(".productName").text(data.name); // 商品标题
+                $('.productName').val(data.name);
                 $("#J_OriginPrice").text(data.price); //商品现价
+                $('#J_OriginPrice').val(data.price);
                 $("#productSale").text(data.sale); // 商品标题
-                $("#J_BigImg").attr("src",data.pic);
-                $("#stock").text(data.stock);
+                $("#productSale").val(data.sale);
+                $("#J_BigImg").attr("src",data.pic);// 商品图片
+                $("#J_BigImg").val("src",data.pic);
+                $("#stock").text(data.stock); // 商品库存
+                $("#stock").val(data.stock);
+                $("#productDescription").text(data.description); //商品详情
+                $("#productDescription").val(data.description);
 
             },error:function () {
                 alert("失败");
             }
         })
+    }
+    function   addToCart() {
+        $(".productName").val(); // 商品标题
+        $("#J_OriginPrice").val(); //商品现价
+        $("#productSale").val(); // 累计销售
+        $("#J_BigImg").attr("src");// 商品图片
+        $("#stock").val(); // 商品库存
+        $("#productDescription").val(); //商品详情*/
+        $.ajax({
+            url:"http://localhost:8090/productDetails/testaa",
+            data:{
+                "id":$('#productId').val(),
+                "name":$(".productName").val(),
+                "price":$("#J_OriginPrice").val(),
+                "sale":$("#productSale").val(),
+                "pic":$("#J_BigImg").attr("src"),
+                "stock":$("#stock").val(),
+                "description":$("#productDescription").val()
+            },
+            dataType:"json",
+            success:function (data) {
+                alert("成功");
+            },
+            error:function () {
+                alert("失败");
+            }
+
+
+        })
+
     }
 
 
@@ -360,13 +399,6 @@
                                             </dd>
                                         </dl>
 
-                                        <dl class="size clearfix">
-                                            <dt>尺码：</dt>
-                                            <dd>
-                                                <ol class="J_SizeList size-list clearfix"></ol>
-                                            </dd>
-                                        </dl>
-
                                         <dl class="clearfix">
                                             <dt>数量：</dt>
                                             <dd class="num clearfix">
@@ -388,7 +420,7 @@
                                     <a href="javascript:;" id="J_BuyNow" class="fl mr10 buy-btn buy-now">立刻购买</a>
                                     <input type="hidden" value="nodapei" id="dapeiShow">
 
-                                    <a href="javascript:;" id="J_BuyCart" class="fl mr10 buy-cart buy-btn">加入购物车</a>
+                                    <a   onclick="addToCart()" class="fl mr10 buy-cart buy-btn">加入购物车</a>
 
                                 </div>
                             </div>
@@ -519,7 +551,9 @@
                     <div class="panel-box">
 
                         <!-- 图文详情 -->
-                        <div class="module-panel module-graphic" id="J_ModuleGraphic"></div>
+                        <div class="module-panel module-graphic" id="J_ModuleGraphic">
+                            <h5 id="productDescription"></h5>
+                        </div>
 
                         <!-- 累计评价 -->
                         <div class="module-panel module-rates ui-none" id="J_ModuleRates">
