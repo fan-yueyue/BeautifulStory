@@ -17,9 +17,9 @@ public class ProductDetailsServiceImpl implements ProductDetailsService {
 
 
     @Override
-    public PmsProductVO productDetailsSer() {
-        PmsProductVO pmsProductVO = productDetailsMapper.productDetailsSer();
-        return pmsProductVO;
+    public PmsProductVO productDetailsSer(PmsProductVO pmsProductVO) {
+        PmsProductVO pmsProduct = productDetailsMapper.productDetailsSer(pmsProductVO);
+        return pmsProduct;
     }
 
 

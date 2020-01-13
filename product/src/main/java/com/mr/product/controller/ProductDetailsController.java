@@ -19,10 +19,12 @@ public class ProductDetailsController {
 
     @ResponseBody
     @RequestMapping("productDetailsInquiry")
-    public PmsProductVO productDetailsInquiry(){
-        PmsProductVO pmsProductVO = productDetailsSer.productDetailsSer();
+    public PmsProductVO productDetailsInquiry(PmsProductVO pmsProductVO){
+        System.out.println(pmsProductVO.getId());
+        PmsProductVO pmsProduct = productDetailsSer.productDetailsSer(pmsProductVO);
         System.out.println("111");
-        return pmsProductVO;
+        return pmsProduct;
     }
+
 
 }
