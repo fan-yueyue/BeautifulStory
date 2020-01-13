@@ -30,4 +30,12 @@ public class ToPageController {
         modelAndView.setViewName(url);
         return modelAndView;
     }
+
+    @RequestMapping("toSelectDetail")
+    public  ModelAndView toSelectDetail(String url,Long id){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("view/shopdetail");
+        modelAndView.addObject("name",id);
+        return modelAndView;
+    }
 }

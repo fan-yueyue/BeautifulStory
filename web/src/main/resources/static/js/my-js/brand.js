@@ -19,9 +19,9 @@ $(function () {
                     for( var j=0;j<data.dataList[i].list.length;j++){
                         if(data.dataList[i].id==data.dataList[i].list[j].brandId){
                             console.log(data.dataList[i].list[j]);
-                            html+='        <li class="newest_brand_product"><a class="img_url" href="/shopdetail.html?'+data.dataList[i].list[j].id+'"'
+                            html+='        <li class="newest_brand_product"><a class="img_url" href="/web/toSelectDetail?id='+data.dataList[i].list[j].id+'"'
                             html+='    target="_blank"> <img src="'+data.dataList[i].list[j].pic+'"></img>'
-                            html+='        </a> <a class="product_title" href="../shopdetail.html?'+data.dataList[i].list[j].id+'"'
+                            html+='        </a> <a class="product_title" href="/web/toSelectDetail?id='+data.dataList[i].list[j].id+'"'
                             html+='     target="_blank">'+data.dataList[i].list[j].name+'</a>'
                             html+='        <p class="product_price"><span>&yen;&nbsp;119.00</span> &nbsp;&nbsp;'
                             html+='    <span>&yen;&nbsp;170.00</span></p></li>'
