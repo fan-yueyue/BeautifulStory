@@ -46,8 +46,8 @@
 
 
 
-  <select id="productDetailsSer" resultType="com.mr.product.entity.PmsProductVO">
-    select * from  pms_product WHERE id = 1;
+  <select id="productDetailsSer" resultType="com.mr.product.entity.PmsProductVO" parameterType="com.mr.product.entity.PmsProductVO">
+    select * from  pms_product WHERE id = #{id};
   </select>
 
 </mapper>
