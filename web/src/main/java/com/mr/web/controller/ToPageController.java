@@ -11,7 +11,7 @@ public class ToPageController {
 
     @RequestMapping("toIndex")
     public String toIndex(){
-        return "view/shopdetail";
+        return "view/index";
     }
 
 
