@@ -8,6 +8,6 @@ public class ToPageController {
 
     @RequestMapping("toIndex")
     public String toIndex(){
-        return "view/index";
+        return "view/shopdetail";
     }
 }
