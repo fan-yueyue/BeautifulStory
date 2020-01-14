@@ -32,12 +32,20 @@ public class ToPageController {
 
     @RequestMapping("toBrandStreet")
     public String toBrandStreet(Model model){
-
-
-
         return "view/brandstreet";
-
     }
+
+    @RequestMapping("toOrder")
+    public String toOrder(){
+        return "orderlist";
+    }
+
+    @RequestMapping("toAddress")
+    public String toAddress(){
+        return "address";
+    }
+
+
 
     @RequestMapping("toWeb")
     public  ModelAndView toWeb(String url){
