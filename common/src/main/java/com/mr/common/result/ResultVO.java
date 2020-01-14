@@ -18,6 +18,16 @@ public class ResultVO<T> {
 
     private List<T> dataList;
 
+    private List<T> addressList;
+
+
+    public List<T> getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(List<T> addressList) {
+        this.addressList = addressList;
+    }
 
     public String getCode() {
         return code;
