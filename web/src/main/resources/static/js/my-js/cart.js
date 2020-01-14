@@ -81,7 +81,7 @@ window.onload = function () {
 	
 		selectedTotal.innerHTML = seleted;
 		priceTotal.innerHTML = price.toFixed(2);//方法将一个数字转换成一个小数点后2位的字符串
-        console.log($('priceTotal').val())
+        //console.log($('priceTotal').val())
 		//selectedViewList.innerHTML = HTMLstr;
 	
 		if (seleted == 0) {
@@ -257,6 +257,7 @@ window.onload = function () {
 
     // 点击全部删除
     deleteAll.onclick = function () {
+        console.log($('#deleteAll').val())
         if (selectedTotal.innerHTML != 0) {
             var con = confirm('确定删除所选商品吗？'); //弹出确认框
             if (con) {

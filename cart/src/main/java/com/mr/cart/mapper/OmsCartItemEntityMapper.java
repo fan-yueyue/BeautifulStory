@@ -1,7 +1,8 @@
 package com.mr.cart.mapper;
 
 
-import com.mr.cart.vo.OmsCartItemVO;
+import com.mr.common.vo.OmsCartItemVO;
+import com.mr.common.vo.PmsProductVO;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public interface OmsCartItemEntityMapper {
 
     int insert(OmsCartItemVO record);
 
-    int insertSelective(OmsCartItemVO record);
+    int insertSelective(PmsProductVO record);
 
     OmsCartItemVO selectByPrimaryKey(Long id);
 

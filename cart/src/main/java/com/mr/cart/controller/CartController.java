@@ -1,9 +1,11 @@
 package com.mr.cart.controller;
 
 import com.mr.cart.service.CartService;
-import com.mr.cart.vo.OmsCartItemVO;
+
 import com.mr.common.result.ResultCode;
 import com.mr.common.result.ResultVO;
+import com.mr.common.vo.OmsCartItemVO;
+import com.mr.common.vo.PmsProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,7 +41,7 @@ public class CartController {
 
     @RequestMapping("addToCart")
     @ResponseBody
-    public ResultVO addToCart(OmsCartItemVO cartItemVO){
+    public ResultVO addToCart(PmsProductVO cartItemVO){
         ResultVO resultVO = cartService.addCart(cartItemVO);
         return resultVO;
     }

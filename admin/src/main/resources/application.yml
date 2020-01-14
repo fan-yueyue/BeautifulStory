@@ -9,7 +9,7 @@ spring:
     content-type: text/html
     template-loader-path: classpath:/templates/
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/zzx?ullNamePatternMatchesAll=true&amp;serverTimezone=GMT%2b8?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://127.0.0.1:3306/swarm?ullNamePatternMatchesAll=true&amp;serverTimezone=GMT%2b8?useUnicode=true&characterEncoding=utf8
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource

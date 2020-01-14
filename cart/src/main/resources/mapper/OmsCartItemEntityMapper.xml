@@ -62,7 +62,7 @@
       #{deleteStatus,jdbcType=INTEGER}, #{productCategoryId,jdbcType=BIGINT}, #{productBrand,jdbcType=VARCHAR}, 
       #{productSn,jdbcType=VARCHAR}, #{productAttr,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.mr.cart.vo.OmsCartItemVO" >
+  <insert id="insertSelective" parameterType="com.mr.common.vo.PmsProductVO" >
     insert into oms_cart_item
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

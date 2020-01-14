@@ -2,10 +2,12 @@ package com.mr.cart.service.impl;
 
 import com.mr.cart.mapper.OmsCartItemEntityMapper;
 import com.mr.cart.service.CartService;
-import com.mr.cart.vo.OmsCartItemVO;
+
 import com.mr.common.result.ResultCode;
 import com.mr.common.result.ResultVO;
 
+import com.mr.common.vo.OmsCartItemVO;
+import com.mr.common.vo.PmsProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,10 +35,21 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public ResultVO addCart(OmsCartItemVO cartItemVO) {
+    public ResultVO addCart(PmsProductVO productVO) {
         try {
-            if (cartItemVO != null){
-                cartItemMapper.insertSelective(cartItemVO);
+            if (productVO != null){
+
+
+                OmsCartItemVO omsCartItemVO = new OmsCartItemVO();
+                omsCartItemVO.setProductName(productVO.getProductName());
+                omsCartItemVO.setProductId(productVO.getProductId());
+                omsCartItemVO.setPrice(productVO.getPrice());
+                omsCartItemVO.setQuantity(productVO.getQuantity());
+                omsCartItemVO.setProductSubTitle(productVO.getSubTitle());
+                omsCartItemVO.setProductPic(productVO.getPic());
+                omsCartItemVO.setProductBrand(productVO.getBrandName());
+                omsCartItemVO.setProductSn(productVO.getProductSn());
+                cartItemMapper.insertSelective(productVO);
                 ResultVO resultVO = new ResultVO(ResultCode.SUCCESS.getCode(),ResultCode.SUCCESS.getMessage());
                 return resultVO;
             }else{

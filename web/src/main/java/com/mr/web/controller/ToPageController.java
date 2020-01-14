@@ -14,6 +14,21 @@ public class ToPageController {
         return "view/index";
     }
 
+    @RequestMapping("toMycart")
+    public String toMycart(){
+        return "view/mycart";
+    }
+
+
+
+
+
+    @RequestMapping("toShopdetail")
+    public String toShopdetail(){
+        return "view/shopdetail";
+    }
+
+
 
     @RequestMapping("toBrandStreet")
     public String toBrandStreet(Model model){
