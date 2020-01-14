@@ -3,7 +3,6 @@ package com.mr.admin.service;
 import com.mr.admin.entity.UmsMenberReceiveAddress;
 import com.mr.common.result.ResultVO;
 
-import java.util.List;
 
 public interface UmsMenberReceiveAddressService {
 
