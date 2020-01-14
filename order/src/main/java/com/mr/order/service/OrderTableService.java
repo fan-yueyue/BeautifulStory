@@ -15,4 +15,6 @@ public interface OrderTableService {
     List<OmsOrderItemPO> listUpdate(Long id);
 
     ResultVO updateSp13(Long id);
+
+    ResultVO addOrder(OmsOrderItemPO omsOrderItemPO);
 }

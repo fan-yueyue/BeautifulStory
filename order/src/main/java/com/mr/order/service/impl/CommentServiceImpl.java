@@ -28,12 +28,9 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public Integer listCom(Long productId) {
+    public List<CommentPO> listCom(Long productId) {
         List<CommentPO> list = commentMapper.listCom(productId);
-        if(list.size() ==0){
-            return 0;
-        }
-        return 1;
+        return list;
     }
 
     @Override

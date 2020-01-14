@@ -1,4 +1,5 @@
 // $(function(){
+//     alert("11111111");
 //     $.ajax({
 //         url:"http://localhost:8087/home/test",
 //         data:{},

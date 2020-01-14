@@ -26,9 +26,8 @@ public class CommentController {
     }
 
     @GetMapping("listCom")
-    public Integer listCom(Long productId){
-        Integer size = commentService.listCom(productId);
-        return size;
+    public List<CommentPO> listCom(Long productId){
+        return commentService.listCom(productId);
     }
 
     @GetMapping("listCom2")

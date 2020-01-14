@@ -18,6 +18,7 @@ public class ResultVO<T> {
 
     private List<T> dataList;
 
+
     public String getCode() {
         return code;
     }

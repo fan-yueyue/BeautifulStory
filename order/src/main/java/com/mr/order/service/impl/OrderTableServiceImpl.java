@@ -39,4 +39,11 @@ public class OrderTableServiceImpl implements OrderTableService {
         omsOrderItemMapper.updateSp13(id);
         return  new ResultVO();
     }
+
+    @Override
+    public ResultVO addOrder(OmsOrderItemPO omsOrderItemPO) {
+        omsOrderItemPO.setSp1("2");
+        omsOrderItemMapper.addOrder(omsOrderItemPO);
+        return new ResultVO();
+    }
 }

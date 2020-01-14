@@ -31,13 +31,13 @@
 
 
 
-    <link href="css/index.css-2435ceae.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/index.css-2435ceae.css" rel="stylesheet" type="text/css"/>
 
 
 
-    <link href="__newtown/detail_mls/assets/mls-pc/pages/normal/index.css-449eac8d.css" rel="stylesheet" type="text/css"/>
+    <link href="/__newtown/detail_mls/assets/mls-pc/pages/normal/index.css-449eac8d.css" rel="stylesheet" type="text/css"/>
 
-    <script type="text/javascript" src="js/pkg-pc-base.js-beb518b8.js"></script>
+    <script type="text/javascript" src="/js/pkg-pc-base.js-beb518b8.js"></script>
 
 
 
@@ -74,6 +74,7 @@
     </script>
 </head>
 <body>
+<input type="hidden" value="${name }" id="productId"/>
 
 
 <script type="text/javascript">
@@ -81,6 +82,7 @@
      ** for layout 960
      **/
     (function(){
+        aa();
         var wWidth = $(window).width(); if(wWidth < 1212){ $('body').addClass('media_screen_960'); } else { $('body').addClass('media_screen_1200'); }
         //initTime for log 判断对象是否存在
         window.MoGu && $.isFunction(MoGu.set) && MoGu.set('initTime', (new Date()).getTime());
@@ -103,6 +105,68 @@
             },1000)
         }
     })();
+    function  aa() {
+
+        $.ajax({
+            url:"http://localhost:8090/productDetails/productDetailsInquiry",
+            data:{"id":$('#productId').val()},
+            dataType:"json",
+            success:function (data) {
+                console.log(data);
+                alert("成功");
+                alert(data.stock);
+
+                $(".productName").text(data.name); // 商品标题
+                $('.productName').val(data.name);
+                $("#J_OriginPrice").text(data.price); //商品现价
+                $('#J_OriginPrice').val(data.price);
+                $("#productSale").text(data.sale); // 商品标题
+                $("#productSale").val(data.sale);
+                $("#J_BigImg").attr("src",data.pic);// 商品图片
+                $("#J_BigImg").val("src",data.pic);
+                $("#stock").text(data.stock); // 商品库存
+                $("#stock").val(data.stock);
+                $("#productDescription").text(data.description); //商品详情
+                $("#productDescription").val(data.description);
+
+            },error:function () {
+                alert("失败");
+            }
+        })
+    }
+    function   addToCart() {
+        $(".productName").val(); // 商品标题
+        $("#J_OriginPrice").val(); //商品现价
+        $("#productSale").val(); // 累计销售
+        $("#J_BigImg").attr("src");// 商品图片
+        $("#stock").val(); // 商品库存
+        $("#productDescription").val(); //商品详情*/
+        $.ajax({
+            url:"http://localhost:8090/productDetails/testaa",
+            data:{
+                "id":$('#productId').val(),
+                "name":$(".productName").val(),
+                "price":$("#J_OriginPrice").val(),
+                "sale":$("#productSale").val(),
+                "pic":$("#J_BigImg").attr("src"),
+                "stock":$("#stock").val(),
+                "description":$("#productDescription").val()
+            },
+            dataType:"json",
+            success:function (data) {
+                alert("成功");
+            },
+            error:function () {
+                alert("失败");
+            }
+
+
+        })
+
+    }
+
+
+
 </script>
 
 <div class="mgj_rightbar" data-ptp="_sidebar"></div>
@@ -113,13 +177,13 @@
 <div class="shop-header">
     <div class="header clearfix">
         <div class="user-info fl">
-            <a href="shop.html#110fni1q" class="avatar" title="爱丽缇旗舰店">
+            <a href="/shop.html#110fni1q" class="avatar" title="爱丽缇旗舰店">
 
                 <img class="face fl" src="http://d01.res.meilishuo.net/pic/_o/f7/40/968fc99f2f5812ffdffde483183a_200_200.ch.jpg_5f179ba6_s0_100_100.jpg">
             </a>
             <div class="shop-name fl">
                 <div class="name-wrap clearfix">
-                    <a href="shop.html#110fni1q" class="name fl" title="爱丽缇旗舰店">爱丽缇旗舰店</a>
+                    <a href="/shop.html#110fni1q" class="name fl" title="爱丽缇旗舰店">爱丽缇旗舰店</a>
                     <p class="mark">
                         <img src="http://s2.mogucdn.com/p1/160512/upload_ie4dcyjwha3tgyjxhazdambqgiyde_60x30.png">
                     </p>
@@ -179,7 +243,7 @@
     <div class="mod_list clearfix">
         <div class="mod_item w1200" data-id="4634908" data-width="1200" data-type="topBanner" data-title="$commonTopBanner.layoutname">
             <div class="mod_cont topbanner">
-                <a class="shop_bg_img" href="shop.html#110fni1q" data-src="http://imgtest-dl.meiliworks.com/pic/_o/28/ce/2f023f9e3022e39950807e7e2170_2000_120.c5.jpg" style="background: url(http://imgtest-dl.meiliworks.com/pic/_o/28/ce/2f023f9e3022e39950807e7e2170_2000_120.c5.jpg) center no-repeat"></a>
+                <a class="shop_bg_img" href="/shop.html#110fni1q" data-src="http://imgtest-dl.meiliworks.com/pic/_o/28/ce/2f023f9e3022e39950807e7e2170_2000_120.c5.jpg" style="background: url(http://imgtest-dl.meiliworks.com/pic/_o/28/ce/2f023f9e3022e39950807e7e2170_2000_120.c5.jpg) center no-repeat"></a>
             </div>
         </div>
     </div>
@@ -191,46 +255,46 @@
         <div class="mod_item w1200" data-id="4634909" data-width="1200" data-type="topNav" data-title="$commonTopNav.layoutName">
             <div class="mod_cont topNav">
                 <ol class="clearfix">
-                    <li><a href="shop.html#110fni1q">首页</a></li>
-                    <li class="all"><a href="shop.html#110fni1q/index/total">全部商品</a></li>
-                    <li><a href="shop.html#110fni1q/list/index?categoryId=10702384">热卖单品</a></li>
-                    <li><a href="shop.html#110fni1q/list/index?categoryId=10724128">连衣裙</a></li>
-                    <li><a href="shop.html#110fni1q/list/index?categoryId=10849050">雪纺/蕾丝衫</a></li>
-                    <li><a href="shop.html#110fni1q/list/index?categoryId=10849048">时尚套装</a></li>
-                    <li><a href="shop.html#110fni1q/list/index?categoryId=10845418">T恤针织衫</a></li>
-                    <li><a href="shop.html#110fni1q/list/index?categoryId=10725286">特惠专区</a></li>
-                    <li><a href="shop.html#110fni1q/list/index?categoryId=10725290">夏装上新</a></li>
-                    <li><a href="shop.html#110fni1q/list/index?categoryId=20028214">半身裙/短裤</a></li>
-                    <li><a href="shop.html#110fni1q/list/index?categoryId=20029296">阔腿裤</a></li>
+                    <li><a href="/shop.html#110fni1q">首页</a></li>
+                    <li class="all"><a href="/shop.html#110fni1q/index/total">全部商品</a></li>
+                    <li><a href="/shop.html#110fni1q/list/index?categoryId=10702384">热卖单品</a></li>
+                    <li><a href="/shop.html#110fni1q/list/index?categoryId=10724128">连衣裙</a></li>
+                    <li><a href="/shop.html#110fni1q/list/index?categoryId=10849050">雪纺/蕾丝衫</a></li>
+                    <li><a href="/shop.html#110fni1q/list/index?categoryId=10849048">时尚套装</a></li>
+                    <li><a href="/shop.html#110fni1q/list/index?categoryId=10845418">T恤针织衫</a></li>
+                    <li><a href="/shop.html#110fni1q/list/index?categoryId=10725286">特惠专区</a></li>
+                    <li><a href="/shop.html#110fni1q/list/index?categoryId=10725290">夏装上新</a></li>
+                    <li><a href="/shop.html#110fni1q/list/index?categoryId=20028214">半身裙/短裤</a></li>
+                    <li><a href="/shop.html#110fni1q/list/index?categoryId=20029296">阔腿裤</a></li>
                 </ol>
                 <div class="category_list slideer" style="display: none;">
                     <dl>
                         <dd>
-                            <a href="shop.html#110fni1q/list/index?categoryId=10702384">热卖单品</a>
+                            <a href="/shop.html#110fni1q/list/index?categoryId=10702384">热卖单品</a>
                         </dd>
                         <dd>
-                            <a href="shop.html#110fni1q/list/index?categoryId=20064594">初秋新品</a>
+                            <a href="/shop.html#110fni1q/list/index?categoryId=20064594">初秋新品</a>
                         </dd>
                         <dd>
-                            <a href="shop.html#110fni1q/list/index?categoryId=10724128">连衣裙</a>
+                            <a href="/shop.html#110fni1q/list/index?categoryId=10724128">连衣裙</a>
                         </dd>
                         <dd>
-                            <a href="shop.html#110fni1q/list/index?categoryId=10849050">蕾丝/针织衫</a>
+                            <a href="/shop.html#110fni1q/list/index?categoryId=10849050">蕾丝/针织衫</a>
                         </dd>
                         <dd>
-                            <a href="shop.html#110fni1q/list/index?categoryId=10849048">时尚套装/搭配</a>
+                            <a href="/shop.html#110fni1q/list/index?categoryId=10849048">时尚套装/搭配</a>
                         </dd>
                         <dd>
-                            <a href="shop.html#110fni1q/list/index?categoryId=20028214">半身裙/裤装</a>
+                            <a href="/shop.html#110fni1q/list/index?categoryId=20028214">半身裙/裤装</a>
                         </dd>
                         <dd>
-                            <a href="shop.html#110fni1q/list/index?categoryId=10845418">T恤衫</a>
+                            <a href="/shop.html#110fni1q/list/index?categoryId=10845418">T恤衫</a>
                         </dd>
                         <dd>
-                            <a href="shop.html#110fni1q/list/index?categoryId=20064593">外套专区</a>
+                            <a href="/shop.html#110fni1q/list/index?categoryId=20064593">外套专区</a>
                         </dd>
                         <dd>
-                            <a href="shop.html#110fni1q/list/index?categoryId=10725286">特惠专区</a>
+                            <a href="/shop.html#110fni1q/list/index?categoryId=10725286">特惠专区</a>
                         </dd>
                     </dl>
                 </div>
@@ -266,7 +330,7 @@
 
                     <div class="fl goods-info goods-info-tuan-pre" id="J_GoodsInfo">
                         <div class="info-box">
-                            <h1 class="goods-title"><span itemprop="name">夏季韩版修身荷叶袖连衣裙</span></h1>
+                            <h1 class="goods-title"><span itemprop="name" class="productName"></span></h1>
 
                             <div class="goods-prowrap goods-main">
 
@@ -284,7 +348,7 @@
                                     <dl class="clearfix property-box">
                                         <dt class="property-type property-type-origin">价格：</dt>
                                         <dd class="property-cont property-cont-origin">
-                                            <span id="J_OriginPrice" class="price">¥213.00</span>
+                                            <span id="J_OriginPrice" class="price"></span>
                                         </dd>
                                     </dl>
 
@@ -294,7 +358,7 @@
 
                                         <dt class="property-type property-type-now" > 现价 ：</dt>
                                         <dd class="property-cont property-cont-now fl">
-                                            <span id="J_NowPrice" class="price" style="color: #333333">¥139.00</span>
+                                            <span id="J_NowPrice"  class="price" style="color: #333333">¥139.00</span>
                                             <em class="pre-price-desc">（特卖价 ¥110.97）</em>
                                         </dd>
 
@@ -304,8 +368,7 @@
          57       </span>
     </span>
     <span>累计销量：
-      <span class="num J_SaleNum">
-         193       </span>
+      <span class="num J_SaleNum" id="productSale"></span>
     </span>
                                         </dd>
                                     </dl>
@@ -336,13 +399,6 @@
                                             </dd>
                                         </dl>
 
-                                        <dl class="size clearfix">
-                                            <dt>尺码：</dt>
-                                            <dd>
-                                                <ol class="J_SizeList size-list clearfix"></ol>
-                                            </dd>
-                                        </dl>
-
                                         <dl class="clearfix">
                                             <dt>数量：</dt>
                                             <dd class="num clearfix">
@@ -351,8 +407,7 @@
                                                     <input class="num-input" type="text" value="1" >
                                                     <span class="num-add "></span>
                                                 </div>
-                                                <div class="J_GoodsStock goods-stock fl">库存33件</div>
-                                                <div class="J_GoodsStockTip goods-stock-tip fl">您所填写的商品数量超过库存！</div>
+                                                <div >剩余库存<span id="stock"></span>件</div>
                                             </dd>
                                         </dl>
                                     </div>
@@ -365,7 +420,7 @@
                                     <a href="javascript:;" id="J_BuyNow" class="fl mr10 buy-btn buy-now">立刻购买</a>
                                     <input type="hidden" value="nodapei" id="dapeiShow">
 
-                                    <a href="javascript:;" id="J_BuyCart" class="fl mr10 buy-cart buy-btn">加入购物车</a>
+                                    <a   onclick="addToCart()" class="fl mr10 buy-cart buy-btn">加入购物车</a>
 
                                 </div>
                             </div>
@@ -496,7 +551,9 @@
                     <div class="panel-box">
 
                         <!-- 图文详情 -->
-                        <div class="module-panel module-graphic" id="J_ModuleGraphic"></div>
+                        <div class="module-panel module-graphic" id="J_ModuleGraphic">
+                            <h5 id="productDescription"></h5>
+                        </div>
 
                         <!-- 累计评价 -->
                         <div class="module-panel module-rates ui-none" id="J_ModuleRates">
@@ -596,7 +653,7 @@
                     <div class="ui-box shop-info">
                         <h3 class="ui-hd shop-hd">
                             <div class="shop-name">
-                                <a class="text text-hasim" href="shop.html#110fni1q">爱丽缇旗舰店
+                                <a class="text text-hasim" href="/shop.html#110fni1q">爱丽缇旗舰店
                                 </a>
                                 <div class="mlstalk_widget_btn" data-shopid="110fni1q" style="cursor:pointer; width:1px; margin-top:22px;line-height:16px;" data-style="default" data-toid="1256898643" data-tid="4170704471">&nbsp;</div> 
                             </div>
@@ -628,12 +685,12 @@
                             <div class="shop-btns">
                                 <a rel="nofollow" class="J-shop-follow shop-follow  btn-faved shop-followed " href="javascript:;" data-shopid="110fni1q">
                                     已收藏                         </a>
-                                <a class="btn-goto" href="shop.html#110fni1q">进入店铺</a>
+                                <a class="btn-goto" href="/shop.html#110fni1q">进入店铺</a>
                             </div>
 
                             <div class="shop-search">
                                 <i class="line"></i>
-                                <form action="shop.html#110fni1q/search/index" method="get" id="J_ShopSearch">
+                                <form action="/shop.html#110fni1q/search/index" method="get" id="J_ShopSearch">
                                     <input class="inptxt" type="text" name="q">
                                     <input class="inpbtn" type="submit" value="店内搜索">
                                 </form>
@@ -660,34 +717,34 @@
                             <!-- 列表 -->
                             <ul class="classify-list">
                                 <li>
-                                    <a href="shop.html#110fni1q/index/total">全部商品</a>
+                                    <a href="/shop.html#110fni1q/index/total">全部商品</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html#110fni1q/list/index?categoryId=10702384">热卖单品</a>
+                                    <a href="/shop.html#110fni1q/list/index?categoryId=10702384">热卖单品</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html#110fni1q/list/index?categoryId=10724128">连衣裙</a>
+                                    <a href="/shop.html#110fni1q/list/index?categoryId=10724128">连衣裙</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html#110fni1q/list/index?categoryId=10725286">特惠专区</a>
+                                    <a href="/shop.html#110fni1q/list/index?categoryId=10725286">特惠专区</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html#110fni1q/list/index?categoryId=10845418">T恤衫</a>
+                                    <a href="/shop.html#110fni1q/list/index?categoryId=10845418">T恤衫</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html#110fni1q/list/index?categoryId=10849048">时尚套装/搭配</a>
+                                    <a href="/shop.html#110fni1q/list/index?categoryId=10849048">时尚套装/搭配</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html#110fni1q/list/index?categoryId=10849050">蕾丝/针织衫</a>
+                                    <a href="/shop.html#110fni1q/list/index?categoryId=10849050">蕾丝/针织衫</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html#110fni1q/list/index?categoryId=20028214">半身裙/裤装</a>
+                                    <a href="/shop.html#110fni1q/list/index?categoryId=20028214">半身裙/裤装</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html#110fni1q/list/index?categoryId=20064593">外套专区</a>
+                                    <a href="/shop.html#110fni1q/list/index?categoryId=20064593">外套专区</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html#110fni1q/list/index?categoryId=20064594">初秋新品</a>
+                                    <a href="/shop.html#110fni1q/list/index?categoryId=20064594">初秋新品</a>
                                 </li>
                             </ul>
                         </div>
@@ -779,8 +836,6 @@
             cids: '#682# #683# #704# #705#',
             sellerId: '115knefy',
             main: {
-                originPrice: '¥213.00',
-                nowPrice: '¥139.00',
                 topImages:  ["http://d01.res.meilishuo.net/pic/_o/56/20/136f8f7eff1a84578d1ef245015e_640_832.c1.jpg","http://d01.res.meilishuo.net/pic/_o/19/02/3fc8317debdf1c029d53250857ce_640_832.c1.jpg","http://d01.res.meilishuo.net/pic/_o/8a/7c/c56f09839371795e708cee311c54_640_832.c1.jpg","http://d01.res.meilishuo.net/pic/_o/78/e4/a3fb01808f98c3b4c0b8f9cdbb87_640_832.c1.jpg","http://d01.res.meilishuo.net/pic/_o/6a/2a/31914503ff77f00005bb147787f4_640_832.c1.jpg"]       },
             attribute:  [{"styleId":1,"nowprice":13900,"xdSkuId":"1ecja84","stock":11,"price":21300,"style":"白色","stockId":"1ecja84","img":"http://d01.res.meilishuo.net/pic/_o/56/20/136f8f7eff1a84578d1ef245015e_640_832.c1.jpg","sizeId":100,"size":"S","currency":"￥"},{"styleId":1,"nowprice":13900,"xdSkuId":"1ecja88","stock":8,"price":21300,"style":"白色","stockId":"1ecja88","img":"http://d01.res.meilishuo.net/pic/_o/56/20/136f8f7eff1a84578d1ef245015e_640_832.c1.jpg","sizeId":101,"size":"M","currency":"￥"},{"styleId":1,"nowprice":13900,"xdSkuId":"1ecja8c","stock":14,"price":21300,"style":"白色","stockId":"1ecja8c","img":"http://d01.res.meilishuo.net/pic/_o/56/20/136f8f7eff1a84578d1ef245015e_640_832.c1.jpg","sizeId":102,"size":"L","currency":"￥"}] ,
             listBanner:  {} ,
@@ -804,7 +859,7 @@
 <div class="foot J_footertimer" data-ptp="_foot" data-svrtime="">
     <div class="wrap foot_wrap clearfix">
         <div class="foot_info">
-            <a rel="nofollow" class="info_logo" href="index.html"></a>
+            <a rel="nofollow" class="info_logo" href="/index.html"></a>
             <div class="info_text">
                 <p>营业执照注册号：<a rel="nofollow" href="http://s6.mogucdn.com/pic/140924/8qc9_ieydgn3emqztszbxmmytambqmmyde_1502x2246.jpg" target="_blank">110108013011072</a></p>
                 <p>京ICP备11031139号</p>
@@ -820,14 +875,14 @@
         <div class="foot_link">
             <dl class="link_company">
                 <dt>公司</dt>
-                <dd><a rel="nofollow" href="aboutus.html" target="_blank">关于我们</a></dd>
+                <dd><a rel="nofollow" href="/aboutus.html" target="_blank">关于我们</a></dd>
                 <dd><a rel="nofollow" href="#" target="_blank">招聘信息</a></dd>
-                <dd><a rel="nofollow" href="contactus.html" target="_blank">联系我们</a></dd>
+                <dd><a rel="nofollow" href="/contactus.html" target="_blank">联系我们</a></dd>
             </dl>
             <dl class="link_consumer">
                 <dt>消费者</dt>
-                <dd><a rel="nofollow" href="noviceGuide.html" target="_blank">新手指南</a></dd>
-                <dd><a rel="nofollow" href="serviceEnsure.html" target="_blank">服务保障</a></dd>
+                <dd><a rel="nofollow" href="/noviceGuide.html" target="_blank">新手指南</a></dd>
+                <dd><a rel="nofollow" href="/serviceEnsure.html" target="_blank">服务保障</a></dd>
             </dl>
             <dl class="link_business">
                 <dt>商家</dt>
@@ -840,9 +895,9 @@
 </div>
 
 
-<script type="text/javascript" src="js/index.js-8f5416c3.js"></script>
+<script type="text/javascript" src="/js/index.js-8f5416c3.js"></script>
 
-<script type="text/javascript" src="__newtown/detail_mls/assets/mls-pc/pages/normal/index.js-957ad653.js"></script>
+<script type="text/javascript" src="/__newtown/detail_mls/assets/mls-pc/pages/normal/index.js-957ad653.js"></script>
 
 </body>
 

@@ -1,7 +1,5 @@
 package com.mr.web.controller.order;
-import com.mr.order.controller.OrderTable;
-import com.mr.order.po.OmsOrderItemPO;
-import com.mr.order.service.OrderTableService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

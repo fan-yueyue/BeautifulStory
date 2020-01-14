@@ -47,7 +47,7 @@
   <select id="listCom" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
     select *
     from pms_comment
-    where order_time_id  = #{productId,jdbcType=BIGINT}
+    where product_id  = #{productId,jdbcType=BIGINT}
   </select>
   <select id="listCom2" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
     select pms.*,item.product_pic

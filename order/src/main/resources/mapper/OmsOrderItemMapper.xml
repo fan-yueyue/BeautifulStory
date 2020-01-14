@@ -337,4 +337,25 @@
       sp1 = 3
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <insert id="addOrder" parameterType="com.mr.order.po.OmsOrderItemPO" >
+    insert into oms_order_item (id, order_id, order_sn,
+      product_id, product_pic, product_name,
+      product_brand, product_sn, product_price,
+      product_quantity, product_sku_id, product_sku_code,
+      product_category_id, sp1, sp2,
+      sp3, promotion_name, promotion_amount,
+      coupon_amount, integration_amount, real_amount,
+      gift_integration, gift_growth, product_attr
+      )
+    values (#{id,jdbcType=BIGINT}, #{orderId,jdbcType=BIGINT}, #{orderSn,jdbcType=VARCHAR},
+      #{productId,jdbcType=BIGINT}, #{productPic,jdbcType=VARCHAR}, #{productName,jdbcType=VARCHAR},
+      #{productBrand,jdbcType=VARCHAR}, #{productSn,jdbcType=VARCHAR}, #{productPrice,jdbcType=DECIMAL},
+      #{productQuantity,jdbcType=INTEGER}, #{productSkuId,jdbcType=BIGINT}, #{productSkuCode,jdbcType=VARCHAR},
+      #{productCategoryId,jdbcType=BIGINT}, #{sp1,jdbcType=VARCHAR}, #{sp2,jdbcType=VARCHAR},
+      #{sp3,jdbcType=VARCHAR}, #{promotionName,jdbcType=VARCHAR}, #{promotionAmount,jdbcType=DECIMAL},
+      #{couponAmount,jdbcType=DECIMAL}, #{integrationAmount,jdbcType=DECIMAL}, #{realAmount,jdbcType=DECIMAL},
+      #{giftIntegration,jdbcType=INTEGER}, #{giftGrowth,jdbcType=INTEGER}, #{productAttr,jdbcType=VARCHAR}
+      )
+  </insert>
 </mapper>

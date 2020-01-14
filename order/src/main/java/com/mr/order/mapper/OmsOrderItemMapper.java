@@ -25,4 +25,6 @@ public interface OmsOrderItemMapper {
     List<OmsOrderItemPO> listUpdate(Long id);
 
     void updateSp13(Long id);
+
+    void addOrder(OmsOrderItemPO omsOrderItemPO);
 }

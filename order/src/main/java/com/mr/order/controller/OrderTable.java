@@ -38,4 +38,11 @@ public class OrderTable {
     public ResultVO updateSp13(Long id){
         return orderTableService.updateSp13(id);
     }
+
+    //新增订单接口
+    @PostMapping("addOrder")
+    public ResultVO addOrder(OmsOrderItemPO omsOrderItemPO){
+
+        return orderTableService.addOrder(omsOrderItemPO);
+    }
 }
