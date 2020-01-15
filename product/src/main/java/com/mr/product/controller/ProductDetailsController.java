@@ -17,14 +17,26 @@ public class ProductDetailsController {
     @Autowired
     private ProductDetailsService productDetailsSer;
 
+    //商品详情展示方法
     @ResponseBody
     @RequestMapping("productDetailsInquiry")
     public PmsProductVO productDetailsInquiry(PmsProductVO pmsProductVO){
-        System.out.println(pmsProductVO.getId());
         PmsProductVO pmsProduct = productDetailsSer.productDetailsSer(pmsProductVO);
-        System.out.println("111");
         return pmsProduct;
     }
+    @ResponseBody
+    @RequestMapping("testaa")
+    public PmsProductVO testaa(PmsProductVO pmsProductVO,String quantity){
+        System.out.println(pmsProductVO);
+        return pmsProductVO;
+    }
+    @ResponseBody
+    @RequestMapping("test2")
+    public PmsProductVO test2(PmsProductVO pmsProductVO,String quantity){
+        System.out.println(pmsProductVO.getId());
+        return pmsProductVO;
+    }
+
 
 
 }
