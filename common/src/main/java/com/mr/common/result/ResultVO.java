@@ -3,13 +3,16 @@ package com.mr.common.result;
 import java.util.List;
 
 public class ResultVO<T> {
-
+    public ResultVO(String code, String error) {
+        this.code = code;
+        this.error = error;
+    }
 
     public ResultVO() {
 
     }
 
-    private Long code;
+    private String code;
 
     private String error;
 
@@ -26,16 +29,11 @@ public class ResultVO<T> {
         this.addressList = addressList;
     }
 
-    public Long getCode() {
+    public String getCode() {
         return code;
     }
 
-    public ResultVO(Long code, String error) {
-        this.code = code;
-        this.error = error;
-    }
-
-    public void setCode(Long code) {
+    public void setCode(String code) {
         this.code = code;
     }
 

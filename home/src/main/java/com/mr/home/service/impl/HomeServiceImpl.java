@@ -32,7 +32,7 @@ public class HomeServiceImpl implements HomeService {
         long id = i.longValue();
         List<PmsBrand> list= pmsBrandMapper.selectByPrimaryKey(id);
         ResultVO resultVO = new ResultVO();
-        resultVO.setCode(200L);
+        resultVO.setCode("200");
         resultVO.setDataList(list);
 
         return resultVO;
@@ -43,7 +43,7 @@ public class HomeServiceImpl implements HomeService {
         List<PmsProductCateGory> list=pmsProductCateGoryMapper.getBrandById();
 
         ResultVO resultVO = new ResultVO();
-        resultVO.setCode(200L);
+        resultVO.setCode("200");
         resultVO.setDataList(list);
         return resultVO;
     }
@@ -64,7 +64,7 @@ public class HomeServiceImpl implements HomeService {
             }
         }
         ResultVO resultVO = new ResultVO();
-        resultVO.setCode(200L);
+        resultVO.setCode("200");
         resultVO.setDataList(list);
         return resultVO;
     }
