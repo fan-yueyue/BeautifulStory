@@ -83,6 +83,7 @@
      **/
     (function(){
         aa();
+
         var wWidth = $(window).width(); if(wWidth < 1212){ $('body').addClass('media_screen_960'); } else { $('body').addClass('media_screen_1200'); }
         //initTime for log 判断对象是否存在
         window.MoGu && $.isFunction(MoGu.set) && MoGu.set('initTime', (new Date()).getTime());
@@ -106,7 +107,6 @@
         }
     })();
     function  aa() {
-
         $.ajax({
             url:"http://localhost:8090/productDetails/productDetailsInquiry",
             data:{"id":$('#productId').val()},
@@ -122,8 +122,16 @@
                 $('#J_OriginPrice').val(data.price);
                 $("#productSale").text(data.sale); // 商品标题
                 $("#productSale").val(data.sale);
+                $("#productSn").text(data.productSn); // 商品编号
+                $("#productSn").val(data.productSn);
                 $("#J_BigImg").attr("src",data.pic);// 商品图片
-                $("#J_BigImg").val("src",data.pic);
+                $("#J_BigImg").val("src",data.pic);;
+                $("#brandName").text(data.brandName);//商品品牌
+                $("#brandName").val(data.brandName);
+                $("#subTitle").text(data.subTitle);
+                $("#subTitle").val(data.subTitle);
+                alert(data.subTitle);
+                $("#subTitle").val(data.subtitle);
                 $("#stock").text(data.stock); // 商品库存
                 $("#stock").val(data.stock);
                 $("#productDescription").text(data.description); //商品详情
@@ -135,22 +143,34 @@
         })
     }
     function   addToCart() {
+        $('#productId').val(); //商品id
+        $("#quantity").val(); //购买数量
         $(".productName").val(); // 商品标题
         $("#J_OriginPrice").val(); //商品现价
         $("#productSale").val(); // 累计销售
         $("#J_BigImg").attr("src");// 商品图片
+        $("#brandName").val();//商品品牌
         $("#stock").val(); // 商品库存
-        $("#productDescription").val(); //商品详情*/
+        $("#productSn").val(); // 商品编号
+        $("#subTitle").val(); //商品副标题
+
+
+
+
         $.ajax({
-            url:"http://localhost:8090/productDetails/testaa",
+            url:"http://localhost:8083/cart/addToCart",
             data:{
-                "id":$('#productId').val(),
-                "name":$(".productName").val(),
+                "productId":$('#productId').val(),
+                "productName":$(".productName").val(),
                 "price":$("#J_OriginPrice").val(),
-                "sale":$("#productSale").val(),
-                "pic":$("#J_BigImg").attr("src"),
-                "stock":$("#stock").val(),
-                "description":$("#productDescription").val()
+                //"sale":$("#productSale").val(),
+                "productBrand":$("#brandName").val(),
+                "productPic":$("#J_BigImg").attr("src"),
+                //"stock":$("#stock").val(),
+                "productSn":$("#productSn").val(),
+                "productSubTitle":$("#subTitle").val(),
+                //"description":$("#productDescription").val(),
+                "quantity":$("#quantity").val(),
             },
             dataType:"json",
             success:function (data) {
@@ -330,7 +350,7 @@
 
                     <div class="fl goods-info goods-info-tuan-pre" id="J_GoodsInfo">
                         <div class="info-box">
-                            <h1 class="goods-title"><span itemprop="name" class="productName"></span></h1>
+                            <h1 class="goods-title" ><span id="brandName"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span itemprop="name"  class="productName"></span></h1>
 
                             <div class="goods-prowrap goods-main">
 
@@ -366,6 +386,9 @@
     <span class="mr10">评价：
       <span class="num">
          57       </span>
+    </span>
+    <span class="mr10">商品编号：
+      <span class="num" id="productSn"></span>
     </span>
     <span>累计销量：
       <span class="num J_SaleNum" id="productSale"></span>
@@ -404,7 +427,7 @@
                                             <dd class="num clearfix">
                                                 <div id="J_GoodsNum" class="goods-num fl">
                                                     <span class="num-reduce num-disable"></span>
-                                                    <input class="num-input" type="text" value="1" >
+                                                    <input id="quantity" class="num-input" type="text" value="1" >
                                                     <span class="num-add "></span>
                                                 </div>
                                                 <div >剩余库存<span id="stock"></span>件</div>
@@ -420,7 +443,7 @@
                                     <a href="javascript:;" id="J_BuyNow" class="fl mr10 buy-btn buy-now">立刻购买</a>
                                     <input type="hidden" value="nodapei" id="dapeiShow">
 
-                                    <a   onclick="addToCart()" class="fl mr10 buy-cart buy-btn">加入购物车</a>
+                                    <a  href="#" onclick="addToCart()" class="fl mr10 buy-cart buy-btn">加入购物车</a>
 
                                 </div>
                             </div>
@@ -553,6 +576,7 @@
                         <!-- 图文详情 -->
                         <div class="module-panel module-graphic" id="J_ModuleGraphic">
                             <h5 id="productDescription"></h5>
+                            <h5 id="subTitle"></h5>
                         </div>
 
                         <!-- 累计评价 -->

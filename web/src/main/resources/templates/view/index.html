@@ -79,7 +79,7 @@
                     </ul>
                 </li>
                 <li class="drop cart-wrapper">
-                    <a target="_blank" href="../mycart.html" class="my-cart">
+                    <a target="_blank"  class="my-cart" onclick="toMycart()">
                         <em class="cart"></em>我的购物车</a>
                     <div class="hidden">
                         <ul class="cart-goods"></ul>
@@ -1238,6 +1238,12 @@
 <script>fml.use('page/welcome');;
 fml.use('base');;
 fml.iLoad();</script>
+<script>
+    function toMycart(){
+        window.location.href="http://localhost:8089/web/toMycart";
+    }
+
+</script>
 </body>
 
 </html>
