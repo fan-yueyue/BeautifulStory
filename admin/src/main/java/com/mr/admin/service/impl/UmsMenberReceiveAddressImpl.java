@@ -1,15 +1,16 @@
 package com.mr.admin.service.impl;
 
+import com.mr.admin.entity.Address;
 import com.mr.admin.entity.UmsMenberReceiveAddress;
+import com.mr.admin.mapper.AddressMapper;
 import com.mr.admin.mapper.UmsMenberReceiveAddressMapper;
 import com.mr.admin.service.UmsMenberReceiveAddressService;
 import com.mr.common.result.ResultCode;
 import com.mr.common.result.ResultVO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+
 import java.util.List;
 
 /**
@@ -24,12 +25,17 @@ public class UmsMenberReceiveAddressImpl implements UmsMenberReceiveAddressServi
 
     @Resource
     private UmsMenberReceiveAddressMapper umsMenberReceiveAddressMapper;
+    @Resource
+    private AddressMapper addressMapper;
 
     @Override
-    public ResultVO selecMemberId(Long id) {
+    public ResultVO selecMemberId(Long id,Address address) {
         ResultVO resultVO = new ResultVO();
         List<UmsMenberReceiveAddress> list=umsMenberReceiveAddressMapper.selecMemberId(id);
+        List<Address> arr = addressMapper.selectAddress(address);
+
         resultVO.setDataList(list);
+        resultVO.setAddressList(arr);
         return resultVO;
     }
 
@@ -38,7 +44,7 @@ public class UmsMenberReceiveAddressImpl implements UmsMenberReceiveAddressServi
         System.out.println(umsMenberReceiveAddress);
         ResultVO resultVO = new ResultVO();
         try {
-            //umsMenberReceiveAddress.setMemberId(1);
+            umsMenberReceiveAddress.setMemberId(1L);
             umsMenberReceiveAddressMapper.insertSelective(umsMenberReceiveAddress);
         } catch (Exception e) {
             e.printStackTrace();
@@ -94,6 +100,22 @@ public class UmsMenberReceiveAddressImpl implements UmsMenberReceiveAddressServi
         }catch (Exception e){
             resultVO.setError(ResultCode.FAILED.getMessage());
         }
+        return resultVO;
+    }
+
+    @Override
+    public ResultVO selectAddress(Address address) {
+        ResultVO resultVO = new ResultVO();
+        List<Address> addresseslist = addressMapper.selectAddress(address);
+        resultVO.setDataList(addresseslist);
+        return resultVO;
+    }
+
+    @Override
+    public ResultVO selectCity(Integer id) {
+        ResultVO resultVO = new ResultVO();
+        List<Address> citylist =addressMapper.selectCity(id);
+        resultVO.setDataList(citylist);
         return resultVO;
     }
 

@@ -3,27 +3,39 @@ package com.mr.common.result;
 import java.util.List;
 
 public class ResultVO<T> {
-    public ResultVO(String code, String error) {
-        this.code = code;
-        this.error = error;
-    }
+
 
     public ResultVO() {
 
     }
 
-    private String code;
+    private Long code;
 
     private String error;
 
     private List<T> dataList;
 
+    private List<T> addressList;
 
-    public String getCode() {
+
+    public List<T> getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(List<T> addressList) {
+        this.addressList = addressList;
+    }
+
+    public Long getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public ResultVO(Long code, String error) {
+        this.code = code;
+        this.error = error;
+    }
+
+    public void setCode(Long code) {
         this.code = code;
     }
 
