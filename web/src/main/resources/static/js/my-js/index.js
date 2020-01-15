@@ -1,4 +1,5 @@
 $(function(){
+   // alert("11111111");
     alert("11111111");
     $("#pinPai").click(function () {
         window.location.href="/web/toBrandStreet";

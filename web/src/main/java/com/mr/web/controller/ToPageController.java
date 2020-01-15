@@ -9,20 +9,35 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("web")
 public class ToPageController {
 
+    //index页面
     @RequestMapping("toIndex")
     public String toIndex(){
         return "view/index";
     }
 
-
     @RequestMapping("toBrandStreet")
     public String toBrandStreet(Model model){
-
-
-
         return "view/brandstreet";
-
     }
+
+    //我的订单
+    @RequestMapping("toOrder")
+    public String toOrder(){
+        return "orderlist";
+    }
+
+    //地址管理
+    @RequestMapping("toAddress")
+    public String toAddress(){
+        return "address";
+    }
+
+    //我的足迹
+    @RequestMapping("toFootprint")
+    public String toFootprint(){
+        return "footprint";
+    }
+
 
     @RequestMapping("toWeb")
     public  ModelAndView toWeb(String url){
