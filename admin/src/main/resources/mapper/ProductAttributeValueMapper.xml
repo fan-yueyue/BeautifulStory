@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mr.admin.mapper.ProductAttributeValueMapper" >
+  <resultMap id="BaseResultMap" type="com.mr.admin.entity.ProductAttributeValue" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="product_id" property="productId" jdbcType="BIGINT" />
+    <result column="product_attribute_id" property="productAttributeId" jdbcType="BIGINT" />
+    <result column="value" property="value" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, product_id, product_attribute_id, value, create_date
+  </sql>
+
+  <select id="selectList" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+select p.pic as pic,p.price as price,p.sub_title as subTitle,product_id from pms_product_attribute_value a left join pms_product p on a.product_id = p.id Order By a.create_date Desc
+ </select>
+
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from pms_product_attribute_value
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from pms_product_attribute_value
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.mr.admin.entity.ProductAttributeValue" >
+    insert into pms_product_attribute_value (id, product_id, product_attribute_id, 
+      value, create_date)
+    values (#{id,jdbcType=BIGINT}, #{productId,jdbcType=BIGINT}, #{productAttributeId,jdbcType=BIGINT}, 
+      #{value,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mr.admin.entity.ProductAttributeValue" >
+    insert into pms_product_attribute_value
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="productId != null" >
+        product_id,
+      </if>
+      <if test="productAttributeId != null" >
+        product_attribute_id,
+      </if>
+      <if test="value != null" >
+        value,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="productId != null" >
+        #{productId,jdbcType=BIGINT},
+      </if>
+      <if test="productAttributeId != null" >
+        #{productAttributeId,jdbcType=BIGINT},
+      </if>
+      <if test="value != null" >
+        #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mr.admin.entity.ProductAttributeValue" >
+    update pms_product_attribute_value
+    <set >
+      <if test="productId != null" >
+        product_id = #{productId,jdbcType=BIGINT},
+      </if>
+      <if test="productAttributeId != null" >
+        product_attribute_id = #{productAttributeId,jdbcType=BIGINT},
+      </if>
+      <if test="value != null" >
+        value = #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mr.admin.entity.ProductAttributeValue" >
+    update pms_product_attribute_value
+    set product_id = #{productId,jdbcType=BIGINT},
+      product_attribute_id = #{productAttributeId,jdbcType=BIGINT},
+      value = #{value,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
